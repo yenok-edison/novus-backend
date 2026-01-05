@@ -94,12 +94,14 @@ DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 ALLOWED_HOSTS = [
     "127.0.0.1",
     "localhost",
+    "novusedu"
 ]
 
 CORS_ALLOWED_ORIGINS = [
     "http://127.0.0.1:5500",
     "http://localhost:5500",
     "https://your-netlify-site.netlify.app",
+    "https://novusedu.netlify.app"
 ]
 
 
