@@ -29,8 +29,11 @@ SECRET_KEY = os.getenv("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+# ALLOWED_HOSTS = ['*']
 
+# CSRF_TRUSTED_ORIGINS = [
+#     "https://containable-malia-nonmagnetical.ngrok-free.dev"
+# ]
 
 # Application definition
 
@@ -78,7 +81,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'novus_backend.wsgi.application'
 
-# EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
 EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
 
 
@@ -91,18 +93,19 @@ EMAIL_HOST_PASSWORD = os.getenv("EMAIL_HOST_PASSWORD")
 
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 
-ALLOWED_HOSTS = [
-    "127.0.0.1",
-    "localhost",
-    "novusedu"
-]
+# ALLOWED_HOSTS = [
+#     "127.0.0.1",
+#     "localhost",
+#     "novusedu"
+# ]
 
-CORS_ALLOWED_ORIGINS = [
-    "http://127.0.0.1:5500",
-    "http://localhost:5500",
-    "https://your-netlify-site.netlify.app",
-    "https://novusedu.netlify.app"
-]
+# CORS_ALLOWED_ORIGINS = [
+#     "http://127.0.0.1:5500",
+#     "http://localhost:5500",
+#     "https://your-netlify-site.netlify.app",
+#     "https://novusedu.netlify.app"
+# ]
+CORS_ALLOW_ALL_ORIGINS = True
 
 
 
